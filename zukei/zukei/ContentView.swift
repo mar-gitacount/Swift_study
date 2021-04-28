@@ -9,12 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        //角丸四角形が作られる
-        RoundedRectangle(cornerRadius: 50)
+        //カプセル形が作られる
+        Capsule()
             //色を設定ができる
             .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
             //大きさ設定をする。
-            .frame(width:200,height: 400)
+            .frame(width:250,height: 100)
     }
 }
 
