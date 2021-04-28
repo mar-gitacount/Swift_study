@@ -9,16 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        //楕円形
-        Ellipse()
-             //オレンジ
-            .foregroundColor(.orange)
-             //大きさ
-            .frame(width:200,height:400)
-            //45度傾ける
-            .rotationEffect(.degrees(45))
-            //傾いて領域からはみ出た部分をクリッピングする。
-            .clipped()
+        ZStack {
+            Ellipse()
+                .stroke(lineWidth: 4)
+                .foregroundColor(.pink)
+                .frame(width:100,height: 300)
+            Ellipse()
+                .stroke(lineWidth: 4)
+                .foregroundColor(.purple)
+                .frame(width:100,height: 300)
+                //回転させる
+                .rotationEffect(.degrees(30),anchor: .bottom)
+            Ellipse()
+                .stroke(lineWidth: 4)
+                .foregroundColor(.green)
+                .frame(width:100,height: 300)
+                //傾ける。下を起点とする。
+                .rotationEffect(.degrees(-30),anchor: .bottom)
+        }
         
     }
 }
