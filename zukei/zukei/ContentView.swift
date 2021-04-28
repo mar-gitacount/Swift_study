@@ -9,12 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        //カプセル形が作られる
-        Capsule()
-            //色を設定ができる
-            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-            //大きさ設定をする。
-            .frame(width:250,height: 100)
+        //楕円形
+        Ellipse()
+             //オレンジ
+            .foregroundColor(.orange)
+             //大きさ
+            .frame(width:200,height:400)
+            //45度傾ける
+            .rotationEffect(.degrees(45))
+            //傾いて領域からはみ出た部分をクリッピングする。
+            .clipped()
+        
     }
 }
 
