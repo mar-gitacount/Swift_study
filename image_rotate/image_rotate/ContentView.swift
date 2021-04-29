@@ -17,7 +17,9 @@ struct ContentView: View {
             .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
             .frame(width:300,height: 300)
             //画像を円形にする。
-            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+            .clipShape(RoundedRectangle(cornerRadius: 20))
+            //影を付ける
+            .shadow(radius: 20)
     }
 }
 
