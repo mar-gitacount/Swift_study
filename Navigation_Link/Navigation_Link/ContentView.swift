@@ -9,13 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        List{
-            Text("Content1")
-            Photo1().frame(height:150)
-            Text("Content2")
-            Text("Content3")
-            Text("Content4")
+        NavigationView {
+            List{
+                    Text("Content1")
+                    Text("Content2")
+                    Text("Content3")
+                    Text("Content4")
+                
+            }
+            //タイトルをつける
+            .navigationTitle("タイトル")
+            .navigationBarTitleDisplayMode(.inline)
         }
+       
     }
 }
 
