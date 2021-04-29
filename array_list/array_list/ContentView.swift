@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        MetroView()
+        joint()
         }
     }
 
@@ -39,7 +39,31 @@ struct MetroView: View {
                 Text(String(item))
                 //metroのitemを表示する。
                 Text(metro[item])
-            }            
+            }
+        }
+    }
+}
+
+//weekandnumView
+struct weekandnum: View{
+    //string要素だけの配列
+    //let week:[String]
+    //int要素だけの配列
+    //var num:[Int]
+    let week = ["日","月","火","水","木","金","土"]
+    var num = [4,8,15,16,23,42]
+    var body: some View {
+        Text("hello")
+    }
+}
+
+struct joint: View {
+    let bacicCource = ["ラン","スイム"]
+    let optionCource = ["バイク","カヌー"]
+    var body: some View {
+        let fullcource = bacicCource + optionCource
+        List(0 ..< fullcource.count) { item in
+            Text(fullcource[item])
         }
     }
 }
