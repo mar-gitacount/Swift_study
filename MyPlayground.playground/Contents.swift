@@ -1,3 +1,2 @@
 import UIKit
-
-var greeting = "Hello, playground"
+//インデックス番号の位置の要素更新する。
