@@ -9,17 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        //画像を表示する。
-        Image("km169459347804110212339")
-            //リサイズする
-            .resizable()
-           //領域を埋めるように表示する。
-            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-            .frame(width:300,height: 300)
-            //画像を円形にする。
-            .clipShape(RoundedRectangle(cornerRadius: 20))
-            //影を付ける
-            .shadow(radius: 20)
+        //重ねる
+        ZStack(){
+            Image("km169459347804110212339")
+                .resizable()
+                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                .offset(x:0, y: 0)
+                .frame(width:250,height:400)
+                .clipped()
+            Text("ホトトギス\n鳴きつる方をながむれば\nただ有明の月ぞ残れる\n")
+                .fontWeight(.light)
+                .foregroundColor(.white)
+                .padding()
+                .offset(x:10,y:-5)
+                .frame(width:250,height: 400)
+        }
+        //3DのX軸方向に画像とテキストを傾ける。
+        .rotation3DEffect(.degrees(45),axis:(x:1,y:0,z:0))
     }
 }
 
