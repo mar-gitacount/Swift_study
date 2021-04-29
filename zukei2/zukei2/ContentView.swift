@@ -9,18 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            Circle()
-                .foregroundColor(.green)
-                .frame(width:100, height:100)
-                .position(x:120,y: 150)
-            
-            Rectangle()
-                .foregroundColor(.orange)
-                .frame(width:100,height: 100)
-                .position(x:300,y:350)
+        Image("user_default")
+            .resizable()
+            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+            .frame(width:300,height: 400)
+            .clipped()
+            .rotationEffect(.degrees(10),anchor: .center)
         }
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {
