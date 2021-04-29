@@ -9,9 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
-            Text("Hello, world!")
-                .padding()
+        List(0 ..< 10) { item in//0-9の順番にitemを取り出す繰り返しになる。
+            HStack {
+                //番号を表示する
+                Text(String(item))
+                Text("Hello,world")
+            }
         }
     }
 }
