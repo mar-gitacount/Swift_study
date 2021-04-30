@@ -13,20 +13,21 @@ struct ContentView: View {
     var body: some View {
         //リストで表示する
         List{
-            //一つ目のセクション
-            Section(header: Text("四国")) {
-                ForEach(0..<shikoku.count){index in
+            //headerとfooterを設定する
+            Section(header: Text("四国").font(.largeTitle).padding(.top),
+                    footer: Text("最高標高は石鎚山の1,982m")){
+                //繰り返し処理で四国を表示する。
+                ForEach(0..<shikoku.count){ index in
                     Text(self.shikoku[index])
-                    
                 }
             }
-            //二つ目のセクション
-            Section(header: Text("九州")) {
-                ForEach(0..<kyusyu.count){index in
+            
+            Section(header: Text("九州").font(.largeTitle).padding(.top),
+                    footer: Text("最高標高は宮浦岳")){
+                ForEach(0..<kyusyu.count){ index in
                     Text(self.kyusyu[index])
-                 
                 }
-           }
+            }
         }
     }
 }
