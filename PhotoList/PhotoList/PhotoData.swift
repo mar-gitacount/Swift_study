@@ -21,10 +21,10 @@ func makeData()->[PhotoData]{
     //構造体PhotoData型の写真データが入った配列を作る。
     var dataArray:[PhotoData] = []
     ///写真データを追加していく。
-    dataArray.append(PhotoData(id:1,imageName: "Image_4287", title: "ロキ"))
-    dataArray.append(PhotoData(id:2,imageName: "Image_4347", title:"ヨシツネ"))
-    dataArray.append(PhotoData(id:3,imageName: "Image_4348",title: "ルシファー"))
-    dataArray.append(PhotoData(id:4,imageName: "Image_4349",title: "オオクニヌシ"))
+    dataArray.append(PhotoData(id:1,imageName: "IMG_4287", title: "スピッツ"))
+    dataArray.append(PhotoData(id:2,imageName: "IMG_4347", title:"トイマンチェスターテリア"))
+    dataArray.append(PhotoData(id:3,imageName: "IMG_4348",title: "チワワ"))
+    dataArray.append(PhotoData(id:4,imageName: "IMG_4349",title: "マルチーズ"))
     //写真が入った配列を返す
     return dataArray
 }

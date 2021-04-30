@@ -9,8 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        //PhotoArray配列を呼び出している
+        List(PhotoArray) { item in
+            //PhotoArrayから順番に取り出して実行している。
+            RowView(photo: item)
+        }
     }
 }
 
