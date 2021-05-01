@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0836AFE1263DBA4D0016DDC4 /* SubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836AFE0263DBA4D0016DDC4 /* SubView.swift */; };
+		0836AFE3263DBD6F0016DDC4 /* SubView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836AFE2263DBD6F0016DDC4 /* SubView2.swift */; };
 		08618E59263C45FD009FE505 /* PhotoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08618E58263C45FD009FE505 /* PhotoListApp.swift */; };
 		08618E5B263C45FD009FE505 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08618E5A263C45FD009FE505 /* ContentView.swift */; };
 		08618E5D263C45FE009FE505 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08618E5C263C45FE009FE505 /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0836AFE0263DBA4D0016DDC4 /* SubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubView.swift; sourceTree = "<group>"; };
+		0836AFE2263DBD6F0016DDC4 /* SubView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubView2.swift; sourceTree = "<group>"; };
 		08618E55263C45FD009FE505 /* PhotoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08618E58263C45FD009FE505 /* PhotoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListApp.swift; sourceTree = "<group>"; };
 		08618E5A263C45FD009FE505 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +46,7 @@
 		08618E4C263C45FD009FE505 = {
 			isa = PBXGroup;
 			children = (
+				0836AFE2263DBD6F0016DDC4 /* SubView2.swift */,
 				08618E57263C45FD009FE505 /* PhotoList */,
 				08618E56263C45FD009FE505 /* Products */,
 			);
@@ -60,6 +65,7 @@
 			children = (
 				08618E58263C45FD009FE505 /* PhotoListApp.swift */,
 				08618E5A263C45FD009FE505 /* ContentView.swift */,
+				0836AFE0263DBA4D0016DDC4 /* SubView.swift */,
 				08618E5C263C45FE009FE505 /* Assets.xcassets */,
 				08618E6B263C59E6009FE505 /* RowView.swift */,
 				08618E71263DABF8009FE505 /* PhotoDetailView.swift */,
@@ -150,6 +156,8 @@
 				08618E5B263C45FD009FE505 /* ContentView.swift in Sources */,
 				08618E59263C45FD009FE505 /* PhotoListApp.swift in Sources */,
 				08618E6A263C4EE7009FE505 /* PhotoData.swift in Sources */,
+				0836AFE1263DBA4D0016DDC4 /* SubView.swift in Sources */,
+				0836AFE3263DBD6F0016DDC4 /* SubView2.swift in Sources */,
 				08618E72263DABF8009FE505 /* PhotoDetailView.swift in Sources */,
 				08618E6C263C59E6009FE505 /* RowView.swift in Sources */,
 			);

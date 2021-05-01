@@ -10,18 +10,29 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            //PhotoArray配列を呼び出している
-            List(PhotoArray) { item in
-                //行をタップすると開く詳細ビュー
-                NavigationLink(destination: PhotoDetailView(photo: item)) {
-                    //PhotoArrayから順番に取り出して実行している。
-                    //リストに表示する各行のビュー
-                    RowView(photo: item)
+            VStack(alignment: .leading, spacing: 5){
+                Image("Image")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height:200)
+                //SubViewを開くリンクボタンを作る。
+                NavigationLink(destination: SubView()){
+                    Text("スキパーキ")
                 }
-            }
+                .padding()
+                
+                Image("IMG_4287")
+                    .resizable()
+                    .aspectRatio(contentMode:.fit)
+                    .frame(height:200)
+                NavigationLink(destination: SubView2()){
+                    Text("スピッツ")
+                }
+            }.navigationTitle("似て非なる白と黒の二つの犬種")
         }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
