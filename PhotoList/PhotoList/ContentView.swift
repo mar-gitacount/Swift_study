@@ -9,10 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        //PhotoArray配列を呼び出している
-        List(PhotoArray) { item in
-            //PhotoArrayから順番に取り出して実行している。
-            RowView(photo: item)
+        NavigationView {
+            //PhotoArray配列を呼び出している
+            List(PhotoArray) { item in
+                //行をタップすると開く詳細ビュー
+                NavigationLink(destination: PhotoDetailView(photo: item)) {
+                    //PhotoArrayから順番に取り出して実行している。
+                    //リストに表示する各行のビュー
+                    RowView(photo: item)
+                }
+            }
         }
     }
 }
