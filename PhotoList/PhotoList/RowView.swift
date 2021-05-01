@@ -29,7 +29,7 @@ struct RowView: View {
 struct RowView_Previews: PreviewProvider {
     static var previews: some View {
         //最初の写真データを使って1行分のプレビューを作る。
-        RowView(photo:PhotoArray[2])
+        RowView(photo:PhotoArray[0])
             .previewLayout(.fixed(width:300, height: 80))
     }
 }
