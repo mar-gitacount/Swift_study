@@ -3,7 +3,7 @@ import UIKit
 struct Member {
     let name:String
     var level = 1
-    var age:Int
+    var age:Int 
 }
 
 //構造体を作る
