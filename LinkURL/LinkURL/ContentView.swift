@@ -24,8 +24,13 @@ struct ContentView: View {
             List(webList) {item in
                 //ファビコン
                 Image(item.favicon).resizable().frame(width:40,height: 40)
-                //リンクを貼る
-                Link(item.name, destination : URL(string: item.url)!)
+                //URLチェック
+                if let url = URL(string: item.url),UIApplication.shared.canOpenURL(url){
+                    //リンクを貼る
+                    Link(item.name, destination: url)
+                } else {
+                    Text(item.name).foregroundColor(.gray)+Text("URLエラー").foregroundColor(.red).italic()
+                }
             }
             .navigationBarTitle("自サイト")
         }

@@ -85,3 +85,19 @@ List(webList)で配列WebListからWebデータを取り出してWenページの
 タップするとWebブラウザでWebページを開くリンクはLink(\_title:Strig,destination:URL)の書式で作る事ができる。第一引数には外部引数名が\_なので引数名は不要。第2引数の型はURLなので、URL(stringitem.url)!のように文字列のURLからURLオブジェクトを作る。URL(string:)はnilかもしれないオプショナルバリューなので、ここでは!で強制アンラップしている。次のコードで作ったリンクをクリックするとitem.urlで得たURLのWebページがSafariなどの標準ブラウザと行き来するページとは関係がない、Webブラウザとの行き来はLinkだけで可能。
 
     Link(item.name, destination : URL(string: item.url)!)
+
+  
+
+## ※解説
+
+URL(string:item.url)はオプションバリューなので!で強制アンラップするコードを使ったが、ミスタイプなどでURLの書式が間違っているとエラーになる。URL(string:)で正しいURLを得られるかどうかは、次のようにurlオプショナルバインディングとUIApplication.shared.canOpenURL(url)によるURLチェックを組み合わせる事でチェックする事ができる。
+
+以下の例では、URLチェックを行った結果に対して正しいURLではないと判断された場合には、リンクを貼らずにグレイのWeb名と赤色の”URLエラー”の文字を表示するコード
+
+     //URLチェック
+     if let url = URL(string: item.url),UIApplication.shared.canOpenURL(url){
+            //リンクを貼る
+            Link(item.name, destination: url)
+            } else {
+                    Text(item.name).foregroundColor(.gray)+Text("URLエラー").foregroundColor(.red).italic()
+              }             
