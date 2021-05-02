@@ -46,7 +46,6 @@
 		08618E4C263C45FD009FE505 = {
 			isa = PBXGroup;
 			children = (
-				0836AFE2263DBD6F0016DDC4 /* SubView2.swift */,
 				08618E57263C45FD009FE505 /* PhotoList */,
 				08618E56263C45FD009FE505 /* Products */,
 			);
@@ -65,6 +64,7 @@
 			children = (
 				08618E58263C45FD009FE505 /* PhotoListApp.swift */,
 				08618E5A263C45FD009FE505 /* ContentView.swift */,
+				0836AFE2263DBD6F0016DDC4 /* SubView2.swift */,
 				0836AFE0263DBA4D0016DDC4 /* SubView.swift */,
 				08618E5C263C45FE009FE505 /* Assets.xcassets */,
 				08618E6B263C59E6009FE505 /* RowView.swift */,
