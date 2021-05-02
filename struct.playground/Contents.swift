@@ -3,11 +3,11 @@ import UIKit
 struct Member {
     let name:String
     var level = 1
-    var age:Int 
+    var age:Int
 }
 
 //構造体を作る
-var member1 = Member(name:"鈴木",age:16)
+var member1 = Member(name:"市川",age:16)
 var member2 = Member(name:"佐藤",level:5,age:13)
 
 //構造体の値を利用する
