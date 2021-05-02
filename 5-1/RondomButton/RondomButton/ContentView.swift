@@ -8,29 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
-    //構造体の自身が書き換える変数
-    @State var num:Int = 0
+    //値を変更するので@Statementをつける。
+    @State var msg = "Tankyou"
     var body: some View {
-        
-        Button(action: {
-            //0から100までの乱数を代入
-            num = Int.random(in: 0...100)
-            //Debug preview
-            //print(num)
-        }){
-            //丸四角系のボタンを作成
-            Text("Random Button")
-                .font(.largeTitle)
-                .frame(width: 280, height: 60, alignment: .center)
-                .foregroundColor(Color.white)
-                .background(Color.blue)
-                .cornerRadius(15,antialiased: true)
-            
+        VStack {
+            Button("Tap") {
+                if msg == "Thankyou" {
+                    msg = "ありがとう"
+                }else{
+                    msg = "Thankyou"
+                }
+            }
+            .font(.headline)
+            .foregroundColor(.white)
+            .background(
+                Capsule()
+                    .foregroundColor(.green)
+                    .frame(width:80,height: 30)
+            )
+            //結果の表示
+            Text(msg).padding()
         }
-        //結果を表示するテキスト
-        Text("\(num)")
-            .font(.largeTitle)
-            .padding()
    }
 }
 struct ContentView_Previews: PreviewProvider {
