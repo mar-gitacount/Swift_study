@@ -1,7 +1,8 @@
 # SF Symbols
 
 ハートマークやうさぎ、かめといった絵はイメージを用意しなくても手軽に使えるSFSymbolsである。SF Symbolsを利用するには,Image(systemName:”sum.max”)のように指定する。
-
+※詳細については以下のサイトからダウンロードすることができる
+URL: https://developer.apple.com/sf-symbols/
 イメージの大きさはimageScale()で.small,.medium,.largeから指定する。
 
     import SwiftUI
