@@ -8,27 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
-    //変数iLikeを追加する
-    @State var iLike = true
+    @State var isFast = true
     var body: some View {
-        //第二引数にiLikeを渡してisOnの時にはtrueそうでない時はLike or Notを出力する
-        VStack {
-            Toggle(isOn: $iLike) {
-                Text("Like or Not")
-                    .font(.largeTitle)
-            }
-            .fixedSize()
-            .padding(50)
-            
-            if iLike {
-                Image(systemName:"heart.fill")
-                    .font(.system(size: 80))
-                    .foregroundColor(.red)
-            }else{
-                Image(systemName: "heart.slash")
-                    .font(.system(size: 80))
-                    .foregroundColor(.gray)
-            }
+        HStack {
+            //ボタンアクションを追加する
+            Button(action: {
+                withAnimation{
+                //trueとfalse切り替え
+                isFast.toggle()
+                }
+             }){
+                //アクション内容
+                //ボタン名の変更
+                Text(isFast ? "Run" : "STOP")
+                //テキストのレイアウト
+                    .font(.title)
+                    //trueの時はボタンが赤falseの時は黒
+                    .foregroundColor(isFast ? .red: .black)
+                //イメージの変更
+                //trueの時はうさぎでfalseの時はかめ
+                Image(systemName: isFast ? "hare" : "tortoise")
+                //うさぎとかめの色を決めるtrue = 青　false = "緑"
+                    .foregroundColor(isFast ? .blue : .green)
+                    //falseの時の亀はひっくり返したいのでratationEfectoを使って傾ける
+                    .rotationEffect(.degrees(isFast ? 0 : 180))
+                    //3倍サイズにする
+                    .scaleEffect(3)
+                    .frame(width:100)
+            }.frame(width:240,height: 70)
         }
     }
 }
