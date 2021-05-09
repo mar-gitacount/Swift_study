@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selectedColor = 0
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Picker(selection: $selectedColor, label: Text("Color")) {
+                Text("Red").tag(0)
+                Text("Green").tag(1)
+                Text("Blue").tag(2)
+            }
+        }
     }
 }
 
