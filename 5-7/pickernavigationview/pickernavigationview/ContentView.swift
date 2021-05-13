@@ -11,9 +11,14 @@ struct ContentView: View {
     @State var selectedSize = 2
     let sizes = ["XS","S","M","L","LL"]
     var body: some View {
-        Picker(selection: $selectedSize, label: Text("Size")) {
-            ForEach(0..<sizes.count){ index in
-                Text(sizes[index])
+        NavigationView {
+            Form{
+                Picker(selection: $selectedSize, label: Text("Size")) {
+                    ForEach(0..<sizes.count){ index in
+                        Text(sizes[index])
+                    }
+                }
+                Text("選んだサイズ:\(sizes[selectedSize])")
             }
         }
     }
