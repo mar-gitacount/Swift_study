@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var name: String = ""
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+        TextField("お名前は?", text: $name)
+        //角丸の枠が表示される
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            .frame(width:250)
+        }
+        //名前が空でない時に表示する。
+        if(!name.isEmpty) {
+            Text("\(name)さんこんにちは!")
+        }
     }
 }
 
