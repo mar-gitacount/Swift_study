@@ -1,6 +1,12 @@
-iamport UIKit
+import UIKit
 
-let nums:[Int] = []
-let lastNum = nums.last ?? 0
-let ans = lastNum * 2
-print(ans)
+//料金の計算をする
+func price() -> Int {
+    if let num = Double(kosu) {
+        let result = Int(tanka * num * tax)
+        return result
+    } else {
+        return -1
+    }
+    
+}
